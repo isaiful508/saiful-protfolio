@@ -18,7 +18,7 @@ const Banner = () => {
                     </div>
 
                     <div className="flex items-center justify-center w-full  lg:w-1/2">
-                        <img className="object-cover w-full h-full mx-auto rounded-md lg:max-w-2xl" src="https://i.ibb.co/y5wLy1P/Saiful-formal.jpg" alt="glasses photo" />
+                        <img className="object-cover w-full h-full mx-auto rounded-md lg:max-w-2xl" src="https://i.ibb.co/y5wLy1P/Saiful-formal.jpg" alt="profile_pic" />
                     </div>
                 </div>
             </div>

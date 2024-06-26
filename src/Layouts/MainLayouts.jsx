@@ -5,7 +5,7 @@ import Skills from "../components/Skills/Skills";
 
 const MainLayouts = () => {
     return (
-        <div className="bg-[#191438]">
+        <div className="">
             <Home></Home>
             <Banner></Banner>
             <Skills></Skills>
