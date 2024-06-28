@@ -6,6 +6,7 @@ import node from '../../assets/node.png'
 import mongo from '../../assets/mongo.png'
 import next from '../../assets/next.png'
 import cv from '../../assets/resume_full-stack.pdf'
+import { MdFileDownload } from 'react-icons/md'
 
 // const cv="https://drive.google.com/file/d/1xObiT4Bga7ko0K500llIop6FhWDqG0Rj/view?usp=sharing"
 
@@ -49,12 +50,13 @@ const Banner = () => {
 
                         </div>
                         <a href={cv} download="resume.pdf">
-                        <button className='btn mt-4 uppercase bg-[#392e6d] text-white hover:bg-[#a38cfa] border border-[#a38cfa] poppins-regular '>Get Resume</button>
+                        
+                        <button className='btn mt-4 uppercase bg-[#392e6d] text-white hover:bg-[#a38cfa] border border-[#a38cfa] poppins-regular '><MdFileDownload className='text-xl' /> Get Resume</button>
                         </a>
                     </div>
 
                     <div className="flex items-center justify-center w-full  lg:w-1/2">
-                        <img className="object-cover w-full h-full mx-auto rounded-md lg:max-w-2xl" src="https://i.ibb.co/y5wLy1P/Saiful-formal.jpg" alt="profile_pic" />
+                        <img className="object-cover w-full h-full mx-auto rounded-md lg:max-w-2xl" src="https://i.ibb.co/GkMWL54/Saiful-formal-removebg-preview.png" alt="profile_pic" />
                     </div>
                 </div>
             </div>

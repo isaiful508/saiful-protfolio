@@ -55,21 +55,7 @@
     font-style: normal;
   }
   
-  /* styles.css */
-.circle-bg {
-  position: absolute;
-  top: -50px;
-  left: -50px;
-  width: 500px;
-  height: 500px;
-  background-color: rgba(8, 37, 197, 0.3);
-  border-radius: 50%;
-  z-index: -1;
-}
 
-.projects-container {
-  position: relative;
-}
 
 
 /* tailwind config */

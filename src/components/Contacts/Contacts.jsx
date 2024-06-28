@@ -1,16 +1,20 @@
+import { BsInstagram } from "react-icons/bs";
+import { FaFacebook, FaGithub, FaLinkedin, FaPhoneAlt } from "react-icons/fa";
+import {  IoLocationSharp } from "react-icons/io5";
+import { MdEmail } from "react-icons/md";
 
 
 const Contacts = () => {
     return (
         <div className="container mx-auto mt-10 p-10 border border-[#a38cfa] rounded-lg shadow-xl bg-[#392e6d] text-white">
-        <h3 className="text-4xl text-center mb-10 poppins-medium">I WANT TO HEAR FROM YOU</h3>
+        <h3 className="text-4xl text-center mb-10 poppins-medium">Let's Get In Touch</h3>
         <div className="grid lg:grid-cols-2 grid-cols-1 gap-10">
             <div>
-                <form>
+                <form className="poppins-medium">
                     <div className="mb-4">
                         <label className="block mb-2" htmlFor="name">Your Name</label>
                         <input 
-                            className="w-full p-3 rounded border border-[#a38cfa] bg-[#2d254e] text-white" 
+                            className="w-full p-3  rounded border border-[#a38cfa] bg-[#2d254e] text-white" 
                             type="text" 
                             id="name" 
                             name="name" 
@@ -18,7 +22,7 @@ const Contacts = () => {
                         />
                     </div>
                     <div className="mb-4">
-                        <label className="block mb-2" htmlFor="email">Your Email</label>
+                        <label className="block mb-2 " htmlFor="email">Your Email</label>
                         <input 
                             className="w-full p-3 rounded border border-[#a38cfa] bg-[#2d254e] text-white" 
                             type="email" 
@@ -50,7 +54,7 @@ const Contacts = () => {
                     <div className="mb-4">
                         <label className="block mb-2" htmlFor="message">Message</label>
                         <textarea 
-                            className="w-full p-3 rounded border border-[#a38cfa] bg-[#2d254e] text-white" 
+                            className="w-full h-[120px] p-3 rounded border border-[#a38cfa] bg-[#2d254e] text-white" 
                             id="message" 
                             name="message" 
                             rows="5" 
@@ -59,39 +63,46 @@ const Contacts = () => {
                     </div>
                     <button 
                         type="submit" 
-                        className="w-full py-3 rounded bg-[#a38cfa] text-[#392e6d] uppercase font-bold hover:bg-[#7a63d1] transition-colors duration-300"
+                        className="w-full py-3 rounded bg-[#392e6d] text-white uppercase poppins-medium hover:bg-[#a38cfa] border border-[#a38cfa] transition-colors duration-300"
                     >
                         Send Me Message
                     </button>
                 </form>
             </div>
-            <div className="flex flex-col justify-center">
+            <div className="flex flex-col ml-10 poppins-regular space-y-6">
                 <div className="flex items-center mb-4">
                     <div className="bg-[#a38cfa] rounded-full p-3 mr-4">
-                        <span className="text-2xl">&#x1F4CD;</span>
+                    <IoLocationSharp className="text-xl" />
                     </div>
                     <div>
-                        <p className="text-lg">Address</p>
-                        <p>202 Dog Hill Lane Beloit, KS 67420</p>
+                        <p className="text-xl poppins-medium">Address</p>
+                        <p>Rajbari District, Dhaka, Bangladesh</p>
                     </div>
                 </div>
                 <div className="flex items-center mb-4">
                     <div className="bg-[#a38cfa] rounded-full p-3 mr-4">
-                        <span className="text-2xl">&#x260E;</span>
+                    <FaPhoneAlt className="text-xl" />
                     </div>
                     <div>
-                        <p className="text-lg">Phone</p>
-                        <p>+01589634755</p>
+                        <p className="text-xl poppins-medium">Phone</p>
+                        <p>+8801742004508</p>
                     </div>
                 </div>
                 <div className="flex items-center">
                     <div className="bg-[#a38cfa] rounded-full p-3 mr-4">
-                        <span className="text-2xl">&#x2709;</span>
+                    <MdEmail className="text-xl" />
                     </div>
                     <div>
-                        <p className="text-lg">Email</p>
-                        <p>credesign@gmail.com</p>
+                        <p className="text-xl poppins-medium poppins-medium">Email</p>
+                        <p>isaiful.islam508@gmail.com</p>
                     </div>
+                </div>
+                {/* social link */}
+                <div className="flex gap-6">
+            <a href="https://www.linkedin.com/in/isaiful-islam/" target="_blank"><FaLinkedin className="text-4xl" /></a>
+            <a href="https://github.com/isaiful508" target="_blank"><FaGithub className="text-4xl" /></a>
+            <a href="https://www.facebook.com/saiful508" target="_blank"><FaFacebook className="text-4xl" /></a>
+            <a href="https://www.instagram.com/saiful.ashh/" target="_blank"><BsInstagram className="text-4xl" /></a>
                 </div>
             </div>
         </div>

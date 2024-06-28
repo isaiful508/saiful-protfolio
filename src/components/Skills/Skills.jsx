@@ -62,7 +62,7 @@ const Skills = () => {
 
                     <button
                         onClick={() => setSelectedCategory('frontend')}
-                        className={`px-4 py-4  rounded-lg border border-[#a38cfa] lg:w-[280px] lg:h-[141px] relative text-2xl poppins-medium ${selectedCategory === 'frontend' ? 'bg-[#a38cfa]' : 'bg-[#392e6d]'}`}
+                        className={`px-4 py-4  rounded-lg border border-[#a38cfa] lg:w-[280px] lg:h-[141px] hover:bg-[#a38cfa] relative text-2xl poppins-medium ${selectedCategory === 'frontend' ? 'bg-[#a38cfa]' : 'bg-[#392e6d]'}`}
                     >Frontend
                         <div className="absolute -top-4 -left-4 bottom-4 border border-[#a38cfa] bg-[#392e6d] h-[80px] w-[80px] flex justify-center items-center rounded-lg">
                             <img src={frontend} alt="Frontend" className=" w-8 h-8 mr-2" />
@@ -72,7 +72,7 @@ const Skills = () => {
 
                     <button
                         onClick={() => setSelectedCategory('backend')}
-                        className={`px-4 py-4 rounded-lg border border-[#a38cfa] lg:w-[280px] lg:h-[141px] relative text-2xl poppins-medium ${selectedCategory === 'backend' ? 'bg-[#a38cfa]' : 'bg-[#392e6d]'}`}
+                        className={`px-4 py-4 rounded-lg border border-[#a38cfa] lg:w-[280px] lg:h-[141px] relative hover:bg-[#a38cfa] text-2xl poppins-medium ${selectedCategory === 'backend' ? 'bg-[#a38cfa]' : 'bg-[#392e6d]'}`}
                     >
                         Backend
                         <div className="absolute -top-4 -left-4 bottom-4 border border-[#a38cfa] bg-[#392e6d] h-[80px] w-[80px] flex justify-center items-center rounded-lg">
@@ -83,7 +83,7 @@ const Skills = () => {
 
                     <button
                         onClick={() => setSelectedCategory('tools')}
-                        className={`px-4 py-4 rounded-lg border border-[#a38cfa] lg:w-[280px] lg:h-[141px] relative text-2xl poppins-medium ${selectedCategory === 'tools' ? 'bg-[#a38cfa]' : 'bg-[#392e6d]'}`}
+                        className={`px-4 py-4 rounded-lg border border-[#a38cfa] lg:w-[280px] lg:h-[141px] relative hover:bg-[#a38cfa] text-2xl poppins-medium ${selectedCategory === 'tools' ? 'bg-[#a38cfa]' : 'bg-[#392e6d]'}`}
                     >Tools
                         <div className="absolute -top-4 -left-4 bottom-4 border border-[#a38cfa] bg-[#392e6d] h-[80px] w-[80px] flex justify-center items-center rounded-lg">
                             <img src={tools} alt="Tools" className="w-8 h-8 mr-2" />
@@ -93,7 +93,7 @@ const Skills = () => {
 
                     <button
                         onClick={() => setSelectedCategory('softSkills')}
-                        className={`px-4 py-4  rounded-lg border border-[#a38cfa] lg:w-[280px] lg:h-[141px] relative text-2xl poppins-medium ${selectedCategory === 'softSkills' ? 'bg-[#a38cfa]' : 'bg-[#392e6d]'}`}
+                        className={`px-4 py-4  rounded-lg border border-[#a38cfa] lg:w-[280px] lg:h-[141px] relative hover:bg-[#a38cfa] text-2xl poppins-medium ${selectedCategory === 'softSkills' ? 'bg-[#a38cfa]' : 'bg-[#392e6d]'}`}
                     > Soft Skills
                         <div className="absolute -top-4 -left-4 bottom-4 border border-[#a38cfa] bg-[#392e6d] h-[80px] w-[80px] flex justify-center items-center rounded-lg">
                             <img src={skill} alt="Soft Skills" className="w-8 h-8 mr-2" />

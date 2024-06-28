@@ -35,7 +35,7 @@ const Projects = () => {
             <div className="grid lg:grid-cols-3 grid-cols-1">
                 {
                     projects.map((project) =>
-                        <div key={project.projectName} className="card border border-[#a38cfa]  w-96 shadow-xl">
+                        <div key={project.projectName} className="card border bg-[#392e6d] border-[#a38cfa]  w-96 shadow-xl">
                             <figure className="px-5 pt-6">
                                 <img
                                     src={project.image}
