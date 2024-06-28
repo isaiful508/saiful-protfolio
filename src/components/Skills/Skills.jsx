@@ -54,7 +54,7 @@ const Skills = () => {
     };
 
     return (
-        <div className='mt-32'>
+        <div className='mt-32 container mx-auto'>
             <h3 className='text-4xl text-white text-center mb-10 poppins-medium'>My Skills</h3>
             <div className="flex lg:flex-row flex-col justify-around ">
             

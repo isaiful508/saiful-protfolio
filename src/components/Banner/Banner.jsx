@@ -49,7 +49,7 @@ const Banner = () => {
 
                         </div>
                         <a href={cv} download="resume.pdf">
-                        <button className='btn mt-4 uppercase bg-[#392e6d] text-white hover:bg-[#a38cfa] border border-[#a38cfa] poppins-regular '>Download CV</button>
+                        <button className='btn mt-4 uppercase bg-[#392e6d] text-white hover:bg-[#a38cfa] border border-[#a38cfa] poppins-regular '>Get Resume</button>
                         </a>
                     </div>
 
