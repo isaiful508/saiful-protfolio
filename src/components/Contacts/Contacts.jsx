@@ -18,7 +18,8 @@ const Contacts = () => {
                             type="text" 
                             id="name" 
                             name="name" 
-                            placeholder="Your Name" 
+                            placeholder="Your Name"
+                            required 
                         />
                     </div>
                     <div className="mb-4">
@@ -28,29 +29,12 @@ const Contacts = () => {
                             type="email" 
                             id="email" 
                             name="email" 
-                            placeholder="Your Email" 
+                            placeholder="Your Email"
+                            required
                         />
                     </div>
-                    <div className="mb-4">
-                        <label className="block mb-2" htmlFor="phone">Your Phone</label>
-                        <input 
-                            className="w-full p-3 rounded border border-[#a38cfa] bg-[#2d254e] text-white" 
-                            type="tel" 
-                            id="phone" 
-                            name="phone" 
-                            placeholder="Your Phone" 
-                        />
-                    </div>
-                    <div className="mb-4">
-                        <label className="block mb-2" htmlFor="subject">Subject</label>
-                        <input 
-                            className="w-full p-3 rounded border border-[#a38cfa] bg-[#2d254e] text-white" 
-                            type="text" 
-                            id="subject" 
-                            name="subject" 
-                            placeholder="Subject" 
-                        />
-                    </div>
+                   
+                    
                     <div className="mb-4">
                         <label className="block mb-2" htmlFor="message">Message</label>
                         <textarea 
@@ -59,6 +43,7 @@ const Contacts = () => {
                             name="message" 
                             rows="5" 
                             placeholder="Message"
+                            required
                         ></textarea>
                     </div>
                     <button 
@@ -71,7 +56,7 @@ const Contacts = () => {
             </div>
             <div className="flex flex-col ml-10 poppins-regular space-y-6">
                 <div className="flex items-center mb-4">
-                    <div className="bg-[#a38cfa] rounded-full p-3 mr-4">
+                    <div className="rounded-full p-3 mr-4">
                     <IoLocationSharp className="text-xl" />
                     </div>
                     <div>
@@ -80,7 +65,7 @@ const Contacts = () => {
                     </div>
                 </div>
                 <div className="flex items-center mb-4">
-                    <div className="bg-[#a38cfa] rounded-full p-3 mr-4">
+                    <div className=" rounded-full p-3 mr-4">
                     <FaPhoneAlt className="text-xl" />
                     </div>
                     <div>
@@ -89,7 +74,7 @@ const Contacts = () => {
                     </div>
                 </div>
                 <div className="flex items-center">
-                    <div className="bg-[#a38cfa] rounded-full p-3 mr-4">
+                    <div className=" rounded-full p-3 mr-4">
                     <MdEmail className="text-xl" />
                     </div>
                     <div>

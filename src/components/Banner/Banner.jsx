@@ -12,11 +12,10 @@ import { MdFileDownload } from 'react-icons/md'
 
 const Banner = () => {
     return (
-        <div className="h-[800px] lg:relative">
-            <div className="text-white container  dark:bg-gray-900 lg:absolute top-36 left-32">
+        <div className="h-[800px] container mx-auto pt-10 lg:pt-24">
+            <div className="text-white container dark:bg-gray-900 top-36 left-32">
 
-
-                <div className="container flex flex-col px-6 py-10 mx-auto space-y-6 lg:h-[32rem] lg:py-16 lg:flex-row lg:items-center">
+                <div className="container flex flex-col justify-between items-center px-6 py-10 mx-auto space-y-6 lg:h-[32rem] lg:py-16 lg:flex-row lg:items-center">
                     <div className="w-full lg:w-1/2">
                         <div className="lg:max-w-lg">
                             <h1 className="text-3xl font-semibold tracking-wide dark:text-white lg:text-5xl poppins-bold">
@@ -25,38 +24,38 @@ const Banner = () => {
                             </h1>
                             <p className="poppins-regular mt-2">As a web developer, I specialize in designing and maintaining websites, ensuring seamless functionality and optimal user experience using HTML, CSS,Tailwind CSS, Boostrap, JavaScript,React.js,Node js,Next js, Mongodb etc.</p>
                         </div>
-                        <div className='flex items-center gap-5 mt-4'>
+                        <div className='flex items-center gap-2 lg:gap-5 mt-4'>
                             <div>
-                                <img className='h-[60px] w-[60px]' src={html} alt="html_logo" />
+                                <img className='lg:h-[60px] w-[60px]' src={html} alt="html_logo" />
                             </div>
                             <div>
-                                <img className='h-[60px] w-[60px]' src={css} alt="html_logo" />
+                                <img className='lg:h-[60px] w-[60px]' src={css} alt="css_logo" />
                             </div>
                             <div>
-                                <img className='h-[60px] w-[60px]' src={js} alt="html_logo" />
+                                <img className='lg:h-[60px] w-[60px]' src={js} alt="js_logo" />
                             </div>
                             <div>
-                                <img className='h-[60px] w-[60px]' src={react} alt="html_logo" />
+                                <img className='lg:h-[60px] w-[60px]' src={react} alt="html_logo" />
                             </div>
                             <div>
-                                <img className='h-[60px] w-[60px]' src={node} alt="html_logo" />
+                                <img className='lg:h-[60px] w-[60px]' src={node} alt="html_logo" />
                             </div>
                             <div>
-                                <img className='h-[60px] w-[60px]' src={mongo} alt="html_logo" />
+                                <img className='lg:h-[60px] w-[60px]' src={mongo} alt="html_logo" />
                             </div>
                             <div>
-                                <img className='h-[60px] w-[60px]' src={next} alt="html_logo" />
+                                <img className='lg:h-[60px] w-[60px]' src={next} alt="html_logo" />
                             </div>
 
                         </div>
                         <a href={cv} download="resume.pdf">
-                        
-                        <button className='btn mt-4 uppercase bg-[#392e6d] text-white hover:bg-[#a38cfa] border border-[#a38cfa] poppins-regular '><MdFileDownload className='text-xl' /> Get Resume</button>
+
+                            <button className='btn mt-4 uppercase bg-[#392e6d] text-white hover:bg-[#a38cfa] border border-[#a38cfa] poppins-regular '><MdFileDownload className='text-xl' /> Get Resume</button>
                         </a>
                     </div>
 
                     <div className="flex items-center justify-center w-full  lg:w-1/2">
-                        <img className="object-cover w-full h-full mx-auto rounded-md lg:max-w-2xl" src="https://i.ibb.co/GkMWL54/Saiful-formal-removebg-preview.png" alt="profile_pic" />
+                        <img className="object-cover w-full h-full mx-auto rounded-md lg:max-w-2xl" src="https://i.ibb.co/2hnr06S/profile-pic-1.png" alt="profile_pic" />
                     </div>
                 </div>
             </div>
