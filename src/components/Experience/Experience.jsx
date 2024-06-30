@@ -1,10 +1,18 @@
 const Experience = () => {
     return (
-        <div className="container mx-auto mt-10">
+        <div className="container mx-auto mt-20">
             <h3 className="text-4xl text-white text-center mb-10 poppins-medium">My Experiences</h3>
             <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
-                <li>
-                    <div className="timeline-middle">
+                <li data-aos="fade-right"
+                    data-aos-delay="100"
+                    data-aos-duration="1000"
+                    data-aos-easing="ease-in-out"
+                    data-aos-mirror="true"
+                    
+                    >
+                    <div
+
+                        className="timeline-middle">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 20 20"
@@ -16,14 +24,19 @@ const Experience = () => {
                                 clipRule="evenodd" />
                         </svg>
                     </div>
-                    <div className="timeline-start mb-10 md:text-end">
+                    <div
+
+                        className="timeline-start mb-10 md:text-end">
                         <time className="font-mono italic">2023-2024</time>
                         <div className="text-lg poppins-semibold">Ongoing Projects & Learning</div>
                         <p>Continuously working on personal projects and enhancing my skills in the MERN stack (MongoDB, Express.js, React.js, Node.js). Actively applying for job opportunities and contributing to open-source projects.</p>
                     </div>
                     <hr />
                 </li>
-                <li>
+                <li data-aos="fade-left"
+                    data-aos-delay="100"
+                    data-aos-duration="1000"
+                >
                     <hr />
                     <div className="timeline-middle">
                         <svg
@@ -44,7 +57,9 @@ const Experience = () => {
                     </div>
                     <hr />
                 </li>
-                <li>
+                <li data-aos="fade-right"
+                    data-aos-delay="100"
+                    data-aos-duration="1000">
                     <hr />
                     <div className="timeline-middle">
                         <svg
@@ -65,7 +80,9 @@ const Experience = () => {
                     </div>
                     <hr />
                 </li>
-                <li>
+                <li data-aos="fade-left"
+                    data-aos-delay="100"
+                    data-aos-duration="1000">
                     <hr />
                     <div className="timeline-middle">
                         <svg
@@ -86,7 +103,9 @@ const Experience = () => {
                     </div>
                     <hr />
                 </li>
-                <li>
+                <li data-aos="fade-right"
+                    data-aos-delay="100"
+                    data-aos-duration="1000">
                     <hr />
                     <div className="timeline-middle">
                         <svg

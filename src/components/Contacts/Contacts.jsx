@@ -6,7 +6,7 @@ import { MdEmail } from "react-icons/md";
 
 const Contacts = () => {
     return (
-        <div className="container mx-auto mt-10 p-10 border border-[#a38cfa] rounded-lg shadow-xl bg-[#392e6d] text-white">
+        <div className="container mx-auto mt-20 p-10 border border-[#a38cfa] rounded-lg shadow-xl bg-[#392e6d] text-white">
         <h3 className="text-4xl text-center mb-10 poppins-medium">Let's Get In Touch</h3>
         <div className="grid lg:grid-cols-2 grid-cols-1 gap-10">
             <div>
@@ -66,7 +66,7 @@ const Contacts = () => {
                 </div>
                 <div className="flex items-center mb-4">
                     <div className=" rounded-full p-3 mr-4">
-                    <FaPhoneAlt className="text-xl" />
+                    <FaPhoneAlt className="text-xl " />
                     </div>
                     <div>
                         <p className="text-xl poppins-medium">Phone</p>
@@ -75,7 +75,7 @@ const Contacts = () => {
                 </div>
                 <div className="flex items-center">
                     <div className=" rounded-full p-3 mr-4">
-                    <MdEmail className="text-xl" />
+                    <MdEmail className="text-xl " />
                     </div>
                     <div>
                         <p className="text-xl poppins-medium poppins-medium">Email</p>
@@ -84,10 +84,10 @@ const Contacts = () => {
                 </div>
                 {/* social link */}
                 <div className="flex gap-6">
-            <a href="https://www.linkedin.com/in/isaiful-islam/" target="_blank"><FaLinkedin className="text-4xl" /></a>
-            <a href="https://github.com/isaiful508" target="_blank"><FaGithub className="text-4xl" /></a>
-            <a href="https://www.facebook.com/saiful508" target="_blank"><FaFacebook className="text-4xl" /></a>
-            <a href="https://www.instagram.com/saiful.ashh/" target="_blank"><BsInstagram className="text-4xl" /></a>
+            <a className="transition-transform transform hover:scale-110" href="https://www.linkedin.com/in/isaiful-islam/" target="_blank"><FaLinkedin className="text-4xl" /></a>
+            <a className="transition-transform transform hover:scale-110" href="https://github.com/isaiful508" target="_blank"><FaGithub className="text-4xl" /></a>
+            <a className="transition-transform transform hover:scale-110" href="https://www.facebook.com/saiful508" target="_blank"><FaFacebook className="text-4xl" /></a>
+            <a className="transition-transform transform hover:scale-110" href="https://www.instagram.com/saiful.ashh/" target="_blank"><BsInstagram className="text-4xl" /></a>
                 </div>
             </div>
         </div>

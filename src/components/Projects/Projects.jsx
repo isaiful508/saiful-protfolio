@@ -30,12 +30,12 @@ const projects = [
 
 const Projects = () => {
     return (
-        <div className="container mx-auto mt-10">
+        <div className="container mx-auto mt-20">
             <h3 className="text-4xl text-white text-center mb-10 poppins-medium">My Projects</h3>
             <div className="grid lg:grid-cols-3 grid-cols-1">
                 {
                     projects.map((project) =>
-                        <div key={project.projectName} className="card border bg-[#392e6d] border-[#a38cfa]  w-96 shadow-xl">
+                        <div key={project.projectName} className="card border transition-transform transform hover:scale-110 bg-[#392e6d] border-[#a38cfa]  w-96 shadow-xl">
                             <figure className="px-5 pt-6">
                                 <img
                                     src={project.image}
