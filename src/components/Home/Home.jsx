@@ -1,4 +1,4 @@
-
+import React, { useEffect } from 'react';
 import { Outlet } from 'react-router-dom';
 import Navbar from './../Navbar/Navbar';
 import AOS from 'aos';
@@ -6,13 +6,23 @@ import 'aos/dist/aos.css'; // You can also use <link> for styles
 // ..
 AOS.init();
 
-
 const Home = () => {
+    useEffect(() => {
+        const handleContextMenu = (e) => {
+            e.preventDefault();
+        };
+
+        document.addEventListener('contextmenu', handleContextMenu);
+
+        return () => {
+            document.removeEventListener('contextmenu', handleContextMenu);
+        };
+    }, []);
+
     return (
         <div>
-            <Navbar></Navbar>
-            <Outlet></Outlet>
-          
+            <Navbar />
+            <Outlet />
         </div>
     );
 };
