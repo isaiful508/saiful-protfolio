@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link as ScrollLink } from "react-scroll";
+import Education from './../Education/Education';
 
 const Navbar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -27,6 +28,11 @@ const Navbar = () => {
       <li className="hover:bg-[#a38cfa] rounded-md">
         <ScrollLink to="projectsSection" smooth={true} duration={500} onClick={closeDropdown} className="cursor-pointer">
           Projects
+        </ScrollLink>
+      </li>
+      <li className="hover:bg-[#a38cfa] rounded-md">
+        <ScrollLink to="education" smooth={true} duration={500} onClick={closeDropdown} className="cursor-pointer">
+        Education
         </ScrollLink>
       </li>
       <li className="hover:bg-[#a38cfa] rounded-md">

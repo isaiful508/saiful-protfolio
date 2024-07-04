@@ -6,6 +6,7 @@ import Footer from "../components/Footer/Footer";
 import Home from "../components/Home/Home";
 import Projects from "../components/Projects/Projects";
 import Skills from "../components/Skills/Skills";
+import Education from "../components/Education/Education";
 
 
 const MainLayouts = () => {
@@ -23,12 +24,16 @@ const MainLayouts = () => {
             <Element name="projectsSection">
                 <Projects />
             </Element>
+            <Element name="education">
+                <Education/>
+            </Element>
             <Element name="experienceSection">
                 <Experience />
             </Element>
             <Element name="contactSection">
                 <Contacts />
             </Element>
+            
 
             <Footer></Footer>
         </div>

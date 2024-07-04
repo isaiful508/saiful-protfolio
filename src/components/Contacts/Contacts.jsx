@@ -2,15 +2,46 @@ import { BsInstagram } from "react-icons/bs";
 import { FaFacebook, FaGithub, FaLinkedin, FaPhoneAlt } from "react-icons/fa";
 import {  IoLocationSharp } from "react-icons/io5";
 import { MdEmail } from "react-icons/md";
+import emailjs from '@emailjs/browser';
+import { useRef } from "react";
+import Swal from "sweetalert2";
 
 
 const Contacts = () => {
+    const form = useRef();
+    
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm('service_s91ugdd', 'template_7bnhuch', form.current, {
+        publicKey: 'Up0wNdTmDXYDFr6Vh',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+          form.current.reset();
+          Swal.fire({
+              position: "top-center",
+              icon: "success",
+              title: "Your Message has been sent",
+              showConfirmButton: false,
+              timer: 1500
+            });
+
+          
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+  };
     return (
         <div className="container mx-auto mt-20 p-10 border border-[#a38cfa] rounded-lg shadow-xl bg-[#392e6d] text-white">
         <h3 className="text-4xl text-center mb-10 poppins-medium">Let's Get In Touch</h3>
         <div className="grid lg:grid-cols-2 grid-cols-1 gap-10">
             <div>
-                <form className="poppins-medium">
+                <form ref={form} onSubmit={sendEmail} className="poppins-medium">
                     <div className="mb-4">
                         <label className="block mb-2" htmlFor="name">Your Name</label>
                         <input 

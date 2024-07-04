@@ -8,6 +8,7 @@ import next from '../../assets/next.png'
 import cv from '../../assets/resume_full-stack.pdf'
 import { MdFileDownload } from 'react-icons/md'
 import 'animate.css';
+import { Typewriter, useTypewriter } from 'react-simple-typewriter'
 
 
 
@@ -15,6 +16,18 @@ import 'animate.css';
 // const cv="https://drive.google.com/file/d/1xObiT4Bga7ko0K500llIop6FhWDqG0Rj/view?usp=sharing"
 
 const Banner = () => {
+
+    const [typeEffect] = useTypewriter({
+        words:['Front End Web Developer',
+            'Mern Stack Developer'
+        ],
+        loop:{},
+        typeSpeed:100,
+        deleteSpeed: 50,
+        cursor: true,
+        
+    })
+
     return (
         <div className="h-[800px] container mx-auto pt-10 lg:pt-24">
             <div className="text-white container dark:bg-gray-900 top-36 left-32">
@@ -23,8 +36,8 @@ const Banner = () => {
                     <div className="w-full lg:w-1/2">
                         <div className="lg:max-w-lg">
                             <h1 className="text-3xl font-semibold tracking-wide dark:text-white lg:text-5xl poppins-bold">
-                                I'm <br /> <span className='animate__shakeX'>Saiful Islam</span> <br />
-                                <span className="text-2xl poppins-medium">Front End Web Developer</span>
+                                I'm <br /> Saiful Islam <br />
+                                <span className="text-2xl poppins-medium">{typeEffect}</span>
                             </h1>
                             <p className="poppins-regular mt-2">As a web developer, I specialize in designing and maintaining websites, ensuring seamless functionality and optimal user experience using HTML, CSS,Tailwind CSS, Boostrap, JavaScript,React.js,Node js,Next js, Mongodb etc.</p>
                         </div>
