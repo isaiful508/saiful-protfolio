@@ -24,7 +24,7 @@ const projectsData: Project[] = [
     ],
     technologies: {
       frontend: ["Next js","React", "TypeScript", "Tailwind"],
-      backend: ["Node.js", "Express", "MongoDB", "Mongoose"],
+      backend: ["Node.js", "Express", "MongoDB", "Mongoose", "JWT"],
       deployment: ["Vercel"]
     },
     challenges: [
@@ -105,36 +105,6 @@ const projectsData: Project[] = [
 ];
 
 const Projects: React.FC = () => {
-  const [filter, setFilter] = useState<string>('All');
-  const tiltRefs = useRef<(HTMLDivElement | null)[]>([]);
-  
-  useEffect(() => {
-    tiltRefs.current.forEach((ref) => {
-      if (ref) {
-        VanillaTilt.init(ref, {
-          max: 15,
-          speed: 400,
-          glare: true,
-          'max-glare': 0.5,
-          scale: 1.05
-        });
-      }
-    });
-    
-    return () => {
-      tiltRefs.current.forEach((ref) => {
-        if (ref) {
-          // @ts-ignore - VanillaTilt types are not complete
-          ref.vanillaTilt?.destroy();
-        }
-      });
-    };
-  }, [filter]);
-
-  const categories = ['All', 'Full Stack', 'Web App', 'AI/ML'];
-  const filteredProjects = filter === 'All' 
-    ? projectsData 
-    : projectsData.filter(project => project.category === filter);
 
   return (
     <section id="projects" className="section relative overflow-hidden">
@@ -149,38 +119,15 @@ const Projects: React.FC = () => {
         >
           Featured Projects
         </motion.h2>
-        
-        <motion.div 
-          className="flex flex-wrap justify-center gap-4 mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-        >
-          {categories.map(category => (
-            <motion.button
-              key={category}
-              onClick={() => setFilter(category)}
-              className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                filter === category 
-                  ? 'bg-blue-600 text-white shadow-lg shadow-blue-500/20' 
-                  : 'bg-white dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700'
-              }`}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              {category}
-            </motion.button>
-          ))}
-        </motion.div>
+  
         
         <motion.div 
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           layout
         >
-          {filteredProjects.map((project, index) => (
+          {projectsData.map((project, index) => (
             <motion.div
               key={project.id}
-              ref={el => tiltRefs.current[index] = el}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
