@@ -12,13 +12,13 @@ const Home: React.FC = () => {
   return (
     <main>
       <Hero />
-      <About />
-      <Education />
-      <Experience />
       <Skills />
+      <Experience />
       <Projects />
+      <Education />
       <Blog/>
       <Contact />
+      <About />
     </main>
   );
 };
