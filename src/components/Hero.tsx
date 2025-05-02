@@ -64,7 +64,7 @@ const Hero: React.FC = () => {
             <div className="relative">
               <div className="w-64 h-64 md:w-80 md:h-80 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full overflow-hidden border-4 border-white dark:border-gray-800 shadow-xl">
                 <img 
-                  src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                  src="https://i.ibb.co/2hnr06S/profile-pic-1.png" 
                   alt="Developer portrait" 
                   className="w-full h-full object-cover mix-blend-overlay"
                 />
