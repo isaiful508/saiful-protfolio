@@ -21,7 +21,7 @@ const skillsData: SkillCategory[] = [
       { name: "Nextjs", level: 100 },
       { name: "React.js", level: 100 },
       { name: "Redux", level: 100 },
-      { name: "Design Systems", level: 100 }
+      { name: "Gutenberg Block Development", level: 100 }
     ]
   },
   {
