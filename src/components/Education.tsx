@@ -4,27 +4,47 @@ import { GraduationCap, Calendar, MapPin } from 'lucide-react';
 
 const educationData = [
   {
-    degree: "Master of Science in Computer Science",
-    institution: "Stanford University",
-    location: "Stanford, CA",
+    degree: "Learning Competitive Programming",
+    institution: "",
+    location: "",
+    period: "2025 - Present",
+    description: "Learning competitive programming with C, C++, Python, Algorithms, Data structure, Problem Solving",
+    achievements: [
+   
+    ]
+  },
+ ,
+  {
+    degree: "Next Level Web Development with Programming Hero",
+    institution: "Programming Hero",
+    location: "Level-4, 34, Awal Centre, Banani, Dhaka",
+    period: "2024 - 2025",
+    description: "I have learned typescript, redux toolkit, next js, mongoose etc",
+    achievements: [
+      "Completed 4 Full stack projects",
+    ]
+  },
+  {
+    degree: "Complete Web Development with Programming Hero",
+    institution: "Programming Hero",
+    location: "Level-4, 34, Awal Centre, Banani, Dhaka",
+    period: "2023 - 2024",
+    description: "I have learned major techniques in frontend, some backend techs, some frameworks",
+    achievements: [
+      "Completed 12 Projects",
+      "Completed 2 Full stack projects",
+    ]
+  },
+  {
+    degree: "Master's in Islamic History And Culture",
+    institution: "Govt. Rajendra Collage",
+    location: "Faridpur,Dhaka",
     period: "2018 - 2020",
-    description: "Specialized in Artificial Intelligence and Machine Learning. Graduated with honors.",
+    description: "Specialized in Islamic History and Cultures. Graduated with honors.",
     achievements: [
       "Published 2 research papers in international conferences",
       "Teaching Assistant for Advanced Algorithms course",
       "Member of the Computer Science Student Association"
-    ]
-  },
-  {
-    degree: "Bachelor of Engineering in Computer Science",
-    institution: "MIT",
-    location: "Cambridge, MA",
-    period: "2014 - 2018",
-    description: "Major in Computer Science with minor in Mathematics. Dean's List all semesters.",
-    achievements: [
-      "Graduated Summa Cum Laude",
-      "Led the Web Development Club",
-      "Completed 3 research internships"
     ]
   }
 ];
