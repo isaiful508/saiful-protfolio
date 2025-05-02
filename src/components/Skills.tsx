@@ -14,44 +14,48 @@ const skillsData: SkillCategory[] = [
     name: "Frontend",
     icon: <Code2 className="w-6 h-6" />,
     skills: [
-      { name: "HTML5", level: 95 },
-      { name: "CSS3", level: 90 },
-      { name: "JavaScript", level: 85 },
-      { name: "React.js", level: 90 },
-      { name: "Design Systems", level: 85 }
+      { name: "HTML5", level: 100 },
+      { name: "CSS3", level: 100 },
+      { name: "JavaScript", level: 100 },
+      { name: "TypeScript", level: 100 },
+      { name: "Nextjs", level: 100 },
+      { name: "React.js", level: 100 },
+      { name: "Redux", level: 100 },
+      { name: "Design Systems", level: 100 }
     ]
   },
   {
     name: "Backend",
     icon: <Database className="w-6 h-6" />,
     skills: [
-      { name: "Node.js", level: 80 },
-      { name: "Next.js", level: 85 },
-      { name: "Express.js", level: 75 },
-      { name: "MongoDB", level: 70 },
-      { name: "SQL", level: 75 }
+      { name: "Node.js", level: 100 },
+      { name: "Next.js", level: 100 },
+      { name: "Express.js", level: 100 },
+      { name: "MongoDB", level: 100 },
+      { name: "Mongoose", level: 100 },
+      { name: "SQL", level: 100 }
     ]
   },
   {
     name: "Tools",
     icon: <Wrench className="w-6 h-6" />,
     skills: [
-      { name: "Git", level: 90 },
-      { name: "GitHub", level: 85 },
-      { name: "Webpack", level: 75 },
-      { name: "Docker", level: 70 },
-      { name: "VS Code", level: 95 }
+      { name: "Git", level: 100 },
+      { name: "GitHub", level: 100 },
+      { name: "Webpack", level: 100 },
+      { name: "Docker", level: 100 },
+      { name: "VS Code", level: 100 }
     ]
   },
   {
     name: "Soft Skills",
     icon: <Brain className="w-6 h-6" />,
     skills: [
-      { name: "Communication", level: 90 },
-      { name: "Teamwork", level: 95 },
-      { name: "Problem Solving", level: 85 },
-      { name: "Time Management", level: 80 },
-      { name: "Leadership", level: 85 }
+      { name: "Communication", level: 100 },
+      { name: "Teamwork", level: 100 },
+      { name: "Problem Solving", level: 100 },
+      { name: "Time Management", level: 100 },
+      { name: "Leadership", level: 100 }
     ]
   }
 ];
@@ -133,7 +137,7 @@ const Skills: React.FC = () => {
                 >
                   <div className="flex justify-between mb-2">
                     <span className="font-medium">{skill.name}</span>
-                    <span className="text-blue-500">{skill.level}%</span>
+                    {/* <span className="text-blue-500">{skill.level}%</span> */}
                   </div>
                   <div className="h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
                     <motion.div

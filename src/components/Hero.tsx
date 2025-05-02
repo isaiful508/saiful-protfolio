@@ -7,18 +7,19 @@ const Hero: React.FC = () => {
   useEffect(() => {
     const title = titleRef.current;
     if (!title) return;
-    
+  
     const letters = title.textContent?.split('') || [];
     title.textContent = '';
-    
+  
     letters.forEach((letter, i) => {
       const span = document.createElement('span');
-      span.textContent = letter;
+      span.textContent = letter === ' ' ? '\u00A0' : letter;
       span.style.animationDelay = `${i * 0.05}s`;
       span.classList.add('inline-block', 'animate-fade-up', 'opacity-0');
       title.appendChild(span);
     });
   }, []);
+  
   
   return (
     <section id="home" className="min-h-screen flex items-center pt-20 relative">
@@ -29,7 +30,7 @@ const Hero: React.FC = () => {
           <div className="order-2 md:order-1">
             <p className="text-blue-600 font-medium mb-2 animate-fade-up opacity-0">Hello, I'm</p>
             <h1 ref={titleRef} className="font-bold mb-4 animate-fade-up opacity-0">
-              Frontend Developer & UI/UX Designer
+              Frontend Web Developer
             </h1>
             <p className="text-gray-600 dark:text-gray-300 text-lg mb-8 animate-fade-up opacity-0 animate-delay-100">
               I craft responsive websites where technology meets creativity. I'm passionate about building excellent software that improves the lives of those around me.
@@ -62,7 +63,7 @@ const Hero: React.FC = () => {
           
           <div className="order-1 md:order-2 flex justify-center animate-fade-up opacity-0 animate-delay-100">
             <div className="relative">
-              <div className="w-64 h-64 md:w-80 md:h-80 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full overflow-hidden border-4 border-white dark:border-gray-800 shadow-xl">
+              <div className="w-64 h-64 md:w-80 md:h-80 bg-gradient-to-br from-blue-300 to-purple-500 rounded-full overflow-hidden border-4 border-white dark:border-gray-800 shadow-xl">
                 <img 
                   src="https://i.ibb.co/2hnr06S/profile-pic-1.png" 
                   alt="Developer portrait" 
