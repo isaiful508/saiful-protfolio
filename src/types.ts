@@ -6,7 +6,8 @@ export interface Project {
   tags: string[];
   category: string;
   demoLink: string;
-  codeLink: string;
+  clientCodeLink: string;
+  serverCodeLink: string;
   features: string[];
   technologies: {
     frontend: string[];

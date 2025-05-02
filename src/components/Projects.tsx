@@ -8,24 +8,24 @@ import { Project } from '../types';
 const projectsData: Project[] = [
   {
     id: 1,
-    title: "E-Commerce Platform",
-    description: "A full-featured online store with product listings, shopping cart, and checkout functionality.",
-    image: "https://images.pexels.com/photos/6956903/pexels-photo-6956903.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    tags: ["React", "TypeScript", "Node.js", "MongoDB"],
+    title: "Smart Rental & Housing Solution",
+    description: "Nestly is a smart rental housing solution that connects Landlords, Tenants, and an Admin through a feature-rich platform and It is a team project",
+    image: "https://i.ibb.co.com/GqsQ8Mb/image.png",
+    tags: ["Next js", "React", "TypeScript", "Node.js", "MongoDB"],
     category: "Full Stack",
-    demoLink: "https://example.com",
-    codeLink: "https://github.com",
+    demoLink: "https://nextly-client.vercel.app/",
+    clientCodeLink: "https://github.com/ChowdhuryFatema/nestly-client",
+    serverCodeLink :"https://github.com/isaiful508/nestly-server",
     features: [
       "User authentication",
-      "Product search and filtering",
-      "Shopping cart",
+      "House search and filtering",
       "Payment integration",
       "Admin dashboard"
     ],
     technologies: {
-      frontend: ["React", "TypeScript", "Redux", "Tailwind"],
-      backend: ["Node.js", "Express", "MongoDB"],
-      deployment: ["AWS", "Docker"]
+      frontend: ["Next js","React", "TypeScript", "Tailwind"],
+      backend: ["Node.js", "Express", "MongoDB", "Mongoose"],
+      deployment: ["Vercel"]
     },
     challenges: [
       "Implementing real-time inventory updates",
@@ -33,9 +33,9 @@ const projectsData: Project[] = [
       "Securing payment processing"
     ],
     screenshots: [
-      "https://images.pexels.com/photos/6956903/pexels-photo-6956903.jpeg",
-      "https://images.pexels.com/photos/6956904/pexels-photo-6956904.jpeg",
-      "https://images.pexels.com/photos/6956905/pexels-photo-6956905.jpeg"
+      "https://i.ibb.co.com/pvc1sxbX/image.png",
+      "https://i.ibb.co.com/KMRPjp3/image.png",
+      "https://i.ibb.co.com/h1M6F1tq/image.png",
     ]
   },
   {
@@ -220,7 +220,17 @@ const Projects: React.FC = () => {
                       <ExternalLink size={16} className="text-white" />
                     </motion.a>
                     <motion.a 
-                      href={project.codeLink}
+                      href={project.clientCodeLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-2 bg-white/20 backdrop-blur-sm rounded-full hover:bg-white/40 transition"
+                      whileHover={{ scale: 1.2, rotate: 360 }}
+                      transition={{ duration: 0.6 }}
+                    >
+                      <Github size={16} className="text-white" />
+                    </motion.a>
+                    <motion.a 
+                      href={project.serverCodeLink}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="p-2 bg-white/20 backdrop-blur-sm rounded-full hover:bg-white/40 transition"

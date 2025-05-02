@@ -8,35 +8,37 @@ import { Project } from '../types';
 const projectsData: Project[] = [
   {
     id: 1,
-    title: "E-Commerce Platform",
-    description: "A full-featured online store with product listings, shopping cart, and checkout functionality. Built with React, TypeScript, and Tailwind CSS. Features include real-time inventory updates, user authentication, and responsive design.",
-    image: "https://images.pexels.com/photos/6956903/pexels-photo-6956903.jpeg",
-    tags: ["React", "TypeScript", "Tailwind", "Redux", "Node.js", "MongoDB"],
+    title: "Smart Rental & Housing Solution",
+    description: "Nestly is a smart rental housing solution that connects Landlords, Tenants, and an Admin through a feature-rich platform and It is a team project.We are four team members has finished this work.Frontend of BasaFinder Smart Rental & Housing Solution Built with Next.js + TypeScript + React ",
+    image: "https://i.ibb.co.com/GqsQ8Mb/image.png",
+    tags: ["Next js","React", "TypeScript", "Tailwind", "Redux", "Node.js", "MongoDB"],
     category: "Web App",
-    demoLink: "https://example.com",
-    codeLink: "https://github.com",
+    demoLink: "https://nextly-client.vercel.app",
+    clientCodeLink: "https://github.com/ChowdhuryFatema/nestly-client",
+    serverCodeLink: "https://github.com/isaiful508/nestly-server",
     features: [
-      "User authentication and authorization",
-      "Product search and filtering",
-      "Shopping cart management",
-      "Secure payment processing",
-      "Order tracking",
-      "Admin dashboard"
+      "User authentication",
+      "House search and filtering",
+      "Payment integration by stripe",
+      "Admin dashboard",
+      "Landlord dashboard",
+      "Tenants dashboard",
+      "Jwt authentication"
     ],
     technologies: {
-      frontend: ["React", "TypeScript", "Redux", "Tailwind CSS"],
-      backend: ["Node.js", "Express", "MongoDB"],
-      deployment: ["AWS", "Docker", "CI/CD"]
+      frontend: ["Next", "React", "TypeScript", "Redux", "Tailwind CSS"],
+      backend: ["Node.js", "Express", "MongoDB", "Mongoose"],
+      deployment: ["Vercel"]
     },
     challenges: [
-      "Implementing real-time inventory updates",
-      "Optimizing performance for large product catalogs",
+      "Landlord and tenants connection build contact info shared based on payments",
+      "Optimizing performance for large house catalogs",
       "Ensuring secure payment processing"
     ],
     screenshots: [
-      "https://images.pexels.com/photos/6956903/pexels-photo-6956903.jpeg",
-      "https://images.pexels.com/photos/6956904/pexels-photo-6956904.jpeg",
-      "https://images.pexels.com/photos/6956905/pexels-photo-6956905.jpeg"
+      "https://i.ibb.co.com/pvc1sxbX/image.png",
+      "https://i.ibb.co.com/KMRPjp3/image.png",
+      "https://i.ibb.co.com/h1M6F1tq/image.png",
     ]
   }
   // Add more projects here
@@ -93,12 +95,21 @@ const ProjectDetails: React.FC = () => {
                 <ExternalLink className="w-4 h-4 ml-2" />
               </a>
               <a
-                href={project.codeLink}
+                href={project.clientCodeLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-secondary"
               >
-                View Code
+               Client Code
+                <Github className="w-4 h-4 ml-2" />
+              </a>
+              <a
+                href={project.serverCodeLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-secondary"
+              >
+                Server Code
                 <Github className="w-4 h-4 ml-2" />
               </a>
             </div>
