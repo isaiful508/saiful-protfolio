@@ -1,4 +1,0 @@
-/* Obscure content to make screenshots harder using Tailwind utilities */
-.no-screenshot {
-    @apply opacity-50 bg-black;
-  }

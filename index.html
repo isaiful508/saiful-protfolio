@@ -2,19 +2,35 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="https://i.ibb.co/zbSN5zz/s1.png" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Saiful Islam</title>
+    <title>Frontend Developer Portfolio</title>
+    <meta name="description" content="Professional portfolio showcasing frontend development and UI/UX design work">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="Frontend Developer Portfolio">
+    <meta property="og:description" content="Professional portfolio showcasing frontend development and UI/UX design work">
+    <meta property="og:type" content="website">
   </head>
-  <body>
+  <body class="font-['Inter',sans-serif]">
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-    <script type="text/javascript">
-      (function(){
-         emailjs.init({
-           publicKey: "Up0wNdTmDXYDFr6Vh",
-         });
-      })();
-   </script>
+    <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- Initialize theme from localstorage to prevent flash -->
+    <script>
+      // Check if theme is stored in localStorage
+      const savedTheme = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      
+      // Apply dark mode if saved or preferred
+      if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+        document.documentElement.classList.add('dark');
+      }
+    </script>
   </body>
 </html>
