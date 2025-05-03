@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { ArrowRight, Github as GitHub, Linkedin, Twitter } from 'lucide-react';
+import { ArrowRight, Github as GitHub, Instagram, Linkedin, Twitter } from 'lucide-react';
 
 const Hero: React.FC = () => {
   const titleRef = useRef<HTMLHeadingElement>(null);
@@ -46,17 +46,13 @@ const Hero: React.FC = () => {
             </div>
             
             <div className="flex space-x-4 animate-fade-up opacity-0 animate-delay-300">
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" 
-                className="p-2 rounded-full border border-gray-300 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-500 hover:text-blue-500 transition-all duration-300">
-                <GitHub size={20} />
-              </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" 
+            <a href="https://www.linkedin.com/in/isaiful-islam" target="_blank" rel="noopener noreferrer" 
                 className="p-2 rounded-full border border-gray-300 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-500 hover:text-blue-500 transition-all duration-300">
                 <Linkedin size={20} />
               </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" 
+              <a href="https://github.com/isaiful508" target="_blank" rel="noopener noreferrer" 
                 className="p-2 rounded-full border border-gray-300 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-500 hover:text-blue-500 transition-all duration-300">
-                <Twitter size={20} />
+                <GitHub size={20} />
               </a>
             </div>
           </div>

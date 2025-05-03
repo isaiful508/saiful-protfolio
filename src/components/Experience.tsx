@@ -69,7 +69,7 @@ const experienceData = [
 
 const Experience: React.FC = () => {
   return (
-    <section id="experience" className="section relative">
+    <section id="experiences" className="section relative">
       <div className="absolute left-1/2 top-32 bottom-0 w-0.5 bg-blue-500/20 transform -translate-x-1/2" />
 
       <div className="container-custom">

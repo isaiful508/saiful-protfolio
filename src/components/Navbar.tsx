@@ -9,7 +9,7 @@ const Navbar: React.FC = () => {
 
   const navLinks = [
     { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
+    { name: 'Experiences', href: '#experiences' },
     { name: 'Projects', href: '#projects' },
     { name: 'Skills', href: '#skills' },
     { name: 'Contact', href: '#contact' },
@@ -35,14 +35,12 @@ const Navbar: React.FC = () => {
       scrolled ? 'py-3 bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm shadow-md' : 'py-5 bg-transparent'
     }`}>
       <div className="container-custom flex justify-between items-center">
-        {/* Logo */}
         <a href="#home" className="text-2xl font-bold tracking-tight relative group">
-          <span className="text-blue-600">D</span>
-          <span>ev</span>
+          <span className="text-blue-600">S</span>
+          <span>aiful <span  className="text-blue-600">I</span>slam</span>
           <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 group-hover:w-full transition-all duration-300"></div>
         </a>
 
-        {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8">
           <ul className="flex space-x-6">
             {navLinks.map((link) => (
@@ -57,8 +55,6 @@ const Navbar: React.FC = () => {
               </li>
             ))}
           </ul>
-
-          {/* Theme toggle button */}
           <button
             onClick={toggleTheme}
             className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition"
@@ -71,8 +67,6 @@ const Navbar: React.FC = () => {
             )}
           </button>
         </div>
-
-        {/* Mobile menu button */}
         <div className="md:hidden flex items-center">
           <button
             onClick={toggleTheme}
@@ -96,7 +90,6 @@ const Navbar: React.FC = () => {
         </div>
       </div>
 
-      {/* Mobile Navigation */}
       <div
         className={`fixed inset-0 bg-white dark:bg-gray-900 z-40 transform transition-transform duration-300 ease-in-out ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
