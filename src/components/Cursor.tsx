@@ -7,29 +7,35 @@ const Cursor: React.FC = () => {
   const [linkHovered, setLinkHovered] = useState(false);
 
   useEffect(() => {
+    if (window.innerWidth <= 768) return;
+
+    let animationFrameId: number;
+
     const updatePosition = (e: MouseEvent) => {
-      setPosition({ x: e.clientX, y: e.clientY });
+      animationFrameId = requestAnimationFrame(() => {
+        setPosition({ x: e.clientX, y: e.clientY });
+      });
       setHidden(false);
+    };
+
+    const handleMouseOver = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      if (target.closest('a') || target.closest('button')) {
+        setLinkHovered(true);
+      } else {
+        setLinkHovered(false);
+      }
     };
 
     const handleMouseDown = () => setClicked(true);
     const handleMouseUp = () => setClicked(false);
-
-    const handleLinkHoverStart = () => setLinkHovered(true);
-    const handleLinkHoverEnd = () => setLinkHovered(false);
 
     window.addEventListener('mousemove', updatePosition);
     window.addEventListener('mousedown', handleMouseDown);
     window.addEventListener('mouseup', handleMouseUp);
     window.addEventListener('mouseenter', () => setHidden(false));
     window.addEventListener('mouseleave', () => setHidden(true));
-
-    // Track link hovers
-    const links = document.querySelectorAll('a, button');
-    links.forEach(link => {
-      link.addEventListener('mouseenter', handleLinkHoverStart);
-      link.addEventListener('mouseleave', handleLinkHoverEnd);
-    });
+    window.addEventListener('mouseover', handleMouseOver);
 
     return () => {
       window.removeEventListener('mousemove', updatePosition);
@@ -37,42 +43,36 @@ const Cursor: React.FC = () => {
       window.removeEventListener('mouseup', handleMouseUp);
       window.removeEventListener('mouseenter', () => setHidden(false));
       window.removeEventListener('mouseleave', () => setHidden(true));
-
-      links.forEach(link => {
-        link.removeEventListener('mouseenter', handleLinkHoverStart);
-        link.removeEventListener('mouseleave', handleLinkHoverEnd);
-      });
+      window.removeEventListener('mouseover', handleMouseOver);
+      cancelAnimationFrame(animationFrameId);
     };
   }, []);
 
-  // Only show custom cursor on desktop
   if (typeof window !== 'undefined' && window.innerWidth <= 768) {
     return null;
   }
 
   return (
-    <>
-      <div 
-        className={`custom-cursor fixed pointer-events-none z-50 ${hidden ? 'opacity-0' : 'opacity-100'}`}
-        style={{
-          transform: `translate(${position.x}px, ${position.y}px)`
-        }}
-      >
-        {/* Outer cursor ring */}
-        <div 
-          className={`absolute bg-blue-500 rounded-full transform -translate-x-1/2 -translate-y-1/2 transition-all duration-150 ${
-            clicked ? 'w-6 h-6 opacity-30' : linkHovered ? 'w-10 h-10 opacity-20' : 'w-8 h-8 opacity-15'
-          }`}
-        ></div>
-        
-        {/* Inner cursor dot */}
-        <div 
-          className={`absolute bg-blue-500 rounded-full transform -translate-x-1/2 -translate-y-1/2 transition-all duration-150 ${
-            clicked ? 'w-3 h-3' : linkHovered ? 'w-4 h-4' : 'w-2 h-2'
-          }`}
-        ></div>
-      </div>
-    </>
+    <div
+      className={`custom-cursor fixed pointer-events-none z-50 ${
+        hidden ? 'opacity-0' : 'opacity-100'
+      }`}
+      style={{
+        transform: `translate(${position.x}px, ${position.y}px)`,
+        transition: 'transform 0.05s ease-out',
+      }}
+    >
+      <div
+        className={`absolute bg-blue-500 rounded-full transform -translate-x-1/2 -translate-y-1/2 transition-all duration-150 ${
+          clicked ? 'w-6 h-6 opacity-30' : linkHovered ? 'w-10 h-10 opacity-20' : 'w-8 h-8 opacity-15'
+        }`}
+      ></div>
+      <div
+        className={`absolute bg-blue-500 rounded-full transform -translate-x-1/2 -translate-y-1/2 transition-all duration-150 ${
+          clicked ? 'w-3 h-3' : linkHovered ? 'w-4 h-4' : 'w-2 h-2'
+        }`}
+      ></div>
+    </div>
   );
 };
 
