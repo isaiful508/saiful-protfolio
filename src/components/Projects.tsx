@@ -10,10 +10,10 @@ const projectsData: Project[] = [
     id: 1,
     title: "Smart Rental & Housing Solution",
     description: "Nestly is a smart rental housing solution that connects Landlords, Tenants, and an Admin through a feature-rich platform and It is a team project",
-    image: "https://i.ibb.co.com/GqsQ8Mb/image.png",
+    image: "https://i.postimg.cc/sgStWZhj/Screenshot-2025-05-02-143420.png",
     tags: ["Next js", "React", "TypeScript", "Node.js", "MongoDB"],
     category: "Full Stack",
-    demoLink: "https://nextly-client.vercel.app/",
+    liveLink: "https://nextly-client.vercel.app/",
     clientCodeLink: "https://github.com/ChowdhuryFatema/nestly-client",
     serverCodeLink :"https://github.com/isaiful508/nestly-server",
     features: [
@@ -40,71 +40,96 @@ const projectsData: Project[] = [
   },
   {
     id: 2,
-    title: "Social Media Dashboard",
-    description: "A comprehensive dashboard for managing social media accounts and analytics.",
-    image: "https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    tags: ["React", "Next.js", "TailwindCSS", "Firebase"],
-    category: "Web App",
-    demoLink: "https://example.com",
-    codeLink: "https://github.com",
+    title: "Bike Nest",
+    description: "Bike nest is a bike store application.Here user can buy bikes through searching , filtering and payment via surjoPay",
+    image: "https://i.postimg.cc/52H8K42R/image.png",
+    tags: ["React", "TypeScript", "Node.js", "MongoDB", "JWT", "Mongoose"],
+    category: "Full Stack",
+    liveLink: "https://bike-store-client-eight.vercel.app",
+    clientCodeLink: "https://github.com/isaiful508/bike-store-client",
+    serverCodeLink :"https://github.com/isaiful508/bike-store-server",
     features: [
-      "Real-time analytics",
-      "Multi-platform integration",
-      "Automated posting",
-      "Performance tracking",
-      "Custom reports"
+      "User authentication",
+      "Products search and filtering",
+      "Payment integration",
     ],
     technologies: {
-      frontend: ["React", "Next.js", "TailwindCSS"],
-      backend: ["Firebase", "Cloud Functions"],
-      deployment: ["Vercel", "Firebase Hosting"]
+      frontend: ["React", "TypeScript", "Tailwind"],
+      backend: ["Node.js", "Express", "MongoDB", "Mongoose", "JWT"],
+      deployment: ["Vercel"]
     },
     challenges: [
-      "Handling real-time data updates",
-      "Managing multiple API integrations",
-      "Ensuring data accuracy"
+      "Implementing real-time inventory updates",
+      "Optimizing performance for large catalogs",
+      "Securing payment processing"
     ],
     screenshots: [
-      "https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg",
-      "https://images.pexels.com/photos/265088/pexels-photo-265088.jpeg",
-      "https://images.pexels.com/photos/265089/pexels-photo-265089.jpeg"
+      "https://i.postimg.cc/52H8K42R/image.png",
+      "https://i.postimg.cc/kM0VMQJf/image.png",
+      "https://i.postimg.cc/C1fF92qY/image.png",
     ]
-  },
+  }, 
   {
     id: 3,
-    title: "AI-Powered Task Manager",
-    description: "A smart task management system that uses AI to prioritize and organize tasks.",
-    image: "https://images.pexels.com/photos/7376/startup-photos.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    tags: ["React", "Python", "TensorFlow", "FastAPI"],
-    category: "AI/ML",
-    demoLink: "https://example.com",
-    codeLink: "https://github.com",
+    title: "Story Flow News Articles",
+    description: "Story Flow is a online based news article website.User can add article by their publisher and goes for approve from admin.If admin approved it shows all articles section.And also here a payment gateway system.",
+    image: "https://i.postimg.cc/265WvrMG/image.png",
+    tags: ["React", "Node.js", "MongoDB", "JWT", "Firebase"],
+    category: "Full Stack",
+    liveLink: "https://storyflow-85a15.web.app",
+    clientCodeLink: "https://github.com/isaiful508/storyFlow-assignmnet12-client",
+    serverCodeLink :"https://github.com/isaiful508/storyFlow-assignment12-server",
     features: [
-      "AI task prioritization",
-      "Smart scheduling",
-      "Natural language processing",
-      "Progress tracking",
-      "Team collaboration"
+      "User authentication",
+      "Shows news articles",
+      "Payment integration",
+      "Admin dashboard"
     ],
     technologies: {
-      frontend: ["React", "TypeScript", "ChakraUI"],
-      backend: ["Python", "FastAPI", "TensorFlow"],
-      deployment: ["GCP", "Docker"]
+      frontend: ["React", "Firebase", "Tailwind"],
+      backend: ["Node.js", "Express", "MongoDB", "JWT"],
+      deployment: ["Firebase"]
     },
     challenges: [
-      "Implementing accurate AI predictions",
-      "Handling complex scheduling algorithms",
-      "Optimizing model performance"
+      "Implementing real-time inventory updates",
+      "Optimizing performance for large catalogs",
+      "Securing payment processing"
     ],
     screenshots: [
-      "https://images.pexels.com/photos/7376/startup-photos.jpg",
-      "https://images.pexels.com/photos/7377/startup-photos.jpg",
-      "https://images.pexels.com/photos/7378/startup-photos.jpg"
+      "https://i.postimg.cc/265WvrMG/image.png",
+      "https://i.postimg.cc/cH5nBPNS/image.png",
+      "https://i.postimg.cc/FzdJWG9J/image.png",
     ]
-  }
+  }, 
 ];
 
 const Projects: React.FC = () => {
+
+  const [filter, setFilter] = useState<string>('All');
+  const tiltRefs = useRef<(HTMLDivElement | null)[]>([]);
+  
+  useEffect(() => {
+    tiltRefs.current.forEach((ref) => {
+      if (ref) {
+        VanillaTilt.init(ref, {
+          max: 15,
+          speed: 400,
+          glare: true,
+          'max-glare': 0.5,
+          scale: 1.05
+        });
+      }
+    });
+    
+    return () => {
+      tiltRefs.current.forEach((ref) => {
+        if (ref) {
+          // @ts-ignore - VanillaTilt types are not complete
+          ref.vanillaTilt?.destroy();
+        }
+      });
+    };
+  }, [filter]);
 
   return (
     <section id="projects" className="section relative overflow-hidden">
@@ -128,6 +153,7 @@ const Projects: React.FC = () => {
           {projectsData.map((project, index) => (
             <motion.div
               key={project.id}
+              ref={el => tiltRefs.current[index] = el}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -157,7 +183,7 @@ const Projects: React.FC = () => {
                   
                   <div className="flex space-x-2">
                     <motion.a 
-                      href={project.demoLink}
+                      href={project.liveLink}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="p-2 bg-white/20 backdrop-blur-sm rounded-full hover:bg-white/40 transition"

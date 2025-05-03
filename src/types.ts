@@ -5,7 +5,7 @@ export interface Project {
   image: string;
   tags: string[];
   category: string;
-  demoLink: string;
+  liveLink: string;
   clientCodeLink: string;
   serverCodeLink: string;
   features: string[];

@@ -10,10 +10,10 @@ const projectsData: Project[] = [
     id: 1,
     title: "Smart Rental & Housing Solution",
     description: "Nestly is a smart rental housing solution that connects Landlords, Tenants, and an Admin through a feature-rich platform and It is a team project.We are four team members has finished this work.Frontend of BasaFinder Smart Rental & Housing Solution Built with Next.js + TypeScript + React ",
-    image: "https://i.ibb.co.com/GqsQ8Mb/image.png",
+    image: "https://i.postimg.cc/sgStWZhj/Screenshot-2025-05-02-143420.png",
     tags: ["Next js","React", "TypeScript", "Tailwind", "Redux", "Node.js", "MongoDB"],
     category: "Web App",
-    demoLink: "https://nextly-client.vercel.app",
+    liveLink: "https://nextly-client.vercel.app",
     clientCodeLink: "https://github.com/ChowdhuryFatema/nestly-client",
     serverCodeLink: "https://github.com/isaiful508/nestly-server",
     features: [
@@ -36,12 +36,78 @@ const projectsData: Project[] = [
       "Ensuring secure payment processing"
     ],
     screenshots: [
-      "https://i.ibb.co.com/pvc1sxbX/image.png",
-      "https://i.ibb.co.com/KMRPjp3/image.png",
+      "https://i.postimg.cc/6QXFf5rd/Screenshot-2025-05-02-144418.png",
+      "https://i.postimg.cc/CKsXPT79/Screenshot-2025-05-02-144301.png",
       "https://i.ibb.co.com/h1M6F1tq/image.png",
     ]
-  }
-  // Add more projects here
+  },
+  {
+    id: 2,
+    title: "Smart Rental & Housing Solution",
+    description: "Nestly is a smart rental housing solution that connects Landlords, Tenants, and an Admin through a feature-rich platform and It is a team project.We are four team members has finished this work.Frontend of BasaFinder Smart Rental & Housing Solution Built with Next.js + TypeScript + React ",
+    image: "https://i.ibb.co.com/GqsQ8Mb/image.png",
+    tags: ["React", "TypeScript", "Tailwind", "Redux", "Node.js", "MongoDB"],
+    category: "Web App",
+    liveLink: "https://i.postimg.cc/52H8K42R/image.png",
+    clientCodeLink: "https://github.com/ChowdhuryFatema/nestly-client",
+    serverCodeLink: "https://github.com/isaiful508/nestly-server",
+    features: [
+      "User authentication",
+      "House search and filtering",
+      "Payment integration by stripe",
+      "Admin dashboard",
+      "Landlord dashboard",
+      "Tenants dashboard",
+      "Jwt authentication"
+    ],
+    technologies: {
+      frontend: ["Next", "React", "TypeScript", "Redux", "Tailwind CSS"],
+      backend: ["TypeScript","Node.js", "Express", "MongoDB", "Mongoose"],
+      deployment: ["Vercel"]
+    },
+    challenges: [
+      "Landlord and tenants connection build contact info shared based on payments",
+      "Optimizing performance for large house catalogs",
+      "Ensuring secure payment processing"
+    ],
+    screenshots: [
+      "https://i.postimg.cc/52H8K42R/image.png",
+      "https://i.postimg.cc/kM0VMQJf/image.png",
+      "https://i.postimg.cc/C1fF92qY/image.png",
+    ]
+  },
+  {
+    id: 3,
+    title: "Story Flow News Articles",
+    description: "Story Flow is a online based news article website.User can add article by their publisher and goes for approve from admin.If admin approved it shows all articles section.And also here a payment gateway system.",
+    image: "https://i.postimg.cc/265WvrMG/image.png",
+    tags: ["React", "TypeScript", "Node.js", "MongoDB", "JWT", "Mongoose"],
+    category: "Full Stack",
+    liveLink: "https://storyflow-85a15.web.app",
+    clientCodeLink: "https://github.com/isaiful508/storyFlow-assignmnet12-client",
+    serverCodeLink :"https://github.com/isaiful508/storyFlow-assignment12-server",
+    features: [
+      "User authentication",
+      "Shows news articles",
+      "Payment integration",
+      "Admin dashboard"
+    ],
+    technologies: {
+      frontend: ["React", "Firebase", "Tailwind"],
+      backend: ["Node.js", "Express", "MongoDB", "JWT"],
+      deployment: ["Firebase"]
+    },
+    challenges: [
+      "Implementing real-time inventory updates",
+      "Optimizing performance for large catalogs",
+      "Securing payment processing"
+    ],
+    screenshots: [
+      "https://i.postimg.cc/265WvrMG/image.png",
+      "https://i.postimg.cc/cH5nBPNS/image.png",
+      "https://i.postimg.cc/FzdJWG9J/image.png",
+    ]
+  }, 
 ];
 
 const ProjectDetails: React.FC = () => {
@@ -86,7 +152,7 @@ const ProjectDetails: React.FC = () => {
             <h1 className="text-4xl font-bold flex-1">{project.title}</h1>
             <div className="flex gap-4">
               <a 
-                href={project.demoLink}
+                href={project.liveLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-primary"
