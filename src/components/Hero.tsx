@@ -1,5 +1,7 @@
 import React, { useEffect, useRef } from 'react';
-import { ArrowRight, Github as GitHub, Instagram, Linkedin, Twitter } from 'lucide-react';
+import { Download, Facebook, FileText, Github as GitHub, Linkedin } from 'lucide-react';
+import cv from '../assets/main_resume.pdf'
+
 
 const Hero: React.FC = () => {
   const titleRef = useRef<HTMLHeadingElement>(null);
@@ -29,7 +31,7 @@ const Hero: React.FC = () => {
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div className="order-2 md:order-1">
             <p className="text-blue-600 font-medium mb-2 animate-fade-up opacity-0">Hello, I'm</p>
-            <h1 ref={titleRef} className="font-bold mb-4 animate-fade-up opacity-0">
+            <h1 ref={titleRef} className="font-semibold mb-4 animate-fade-up opacity-0">
               Frontend Web Developer
             </h1>
             <p className="text-gray-600 dark:text-gray-300 text-lg mb-8 animate-fade-up opacity-0 animate-delay-100">
@@ -37,11 +39,23 @@ const Hero: React.FC = () => {
             </p>
             
             <div className="flex flex-wrap gap-4 mb-8 animate-fade-up opacity-0 animate-delay-200">
-              <a href="#projects" className="btn btn-primary">
-                View Projects <ArrowRight size={18} className="ml-2" />
+            <a 
+                href={cv}
+                target="_blank"
+                className="btn btn-primary"
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.open('/main_resume.pdf', '_blank', 'noopener,noreferrer');
+                }}
+              >
+                Preview CV <FileText size={18} className="ml-2" />
               </a>
-              <a href="#contact" className="btn btn-secondary">
-                Contact Me
+              <a 
+                href={cv}
+                download="saiful_resume.pdf"
+                className="btn btn-secondary"
+              >
+                Download CV <Download size={18} className="ml-2" />
               </a>
             </div>
             
@@ -53,6 +67,10 @@ const Hero: React.FC = () => {
               <a href="https://github.com/isaiful508" target="_blank" rel="noopener noreferrer" 
                 className="p-2 rounded-full border border-gray-300 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-500 hover:text-blue-500 transition-all duration-300">
                 <GitHub size={20} />
+              </a>
+              <a href="https://www.facebook.com/saiful508" target="_blank" rel="noopener noreferrer" 
+                className="p-2 rounded-full border border-gray-300 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-500 hover:text-blue-500 transition-all duration-300">
+                <Facebook size={20} />
               </a>
             </div>
           </div>
