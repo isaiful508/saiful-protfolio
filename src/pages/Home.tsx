@@ -5,7 +5,7 @@ import Skills from '../components/Skills';
 import Education from '../components/Education';
 import Experience from '../components/Experience';
 import Contact from '../components/Contact';
-import Blog from './Blog';
+// import Blog from './Blog';
 
 const Home: React.FC = () => {
   return (
@@ -15,7 +15,8 @@ const Home: React.FC = () => {
       <Experience />
       <Projects />
       <Education />
-      <Blog/>
+      {/* Later blog will be removed */}
+      {/* <Blog/> */}
       <Contact />
     </main>
   );
