@@ -4,7 +4,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import ProjectDetails from './pages/ProjectDetails';
-import Blog from './pages/Blog';
 import Footer from './components/Footer';
 import Cursor from './components/Cursor';
 import { ThemeProvider } from './context/ThemeContext';
@@ -62,7 +61,6 @@ function App() {
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/project/:id" element={<ProjectDetails />} />
-                <Route path="/blog" element={<Blog />} />
               </Routes>
               <Footer />
             </motion.div>

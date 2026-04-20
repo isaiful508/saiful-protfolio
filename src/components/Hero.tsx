@@ -45,7 +45,7 @@ const Hero: React.FC = () => {
                 className="btn btn-primary"
                 onClick={(e) => {
                   e.preventDefault();
-                  window.open('/saiful_islam_resume.pdf', '_blank', 'noopener,noreferrer');
+                  window.open(cv, '_blank', 'noopener,noreferrer');
                 }}
               >
                 Preview CV <FileText size={18} className="ml-2" />
@@ -77,7 +77,7 @@ const Hero: React.FC = () => {
 
           <div className="order-1 md:order-2 flex justify-center animate-fade-up opacity-0 animate-delay-100">
             <div className="relative">
-              <div className="w-64 h-64 md:w-80 md:h-80 bg-gradient-to-br from-blue-300 to-purple-500 rounded-full overflow-hidden border-4 border-white dark:border-gray-800 shadow-xl">
+              <div className="w-96 rounded-xl border-4 border-white dark:border-gray-800 shadow-2xl">
                 <img
                   src="https://i.ibb.co.com/s955v0VL/formal-saiful.jpg"
                   alt="saiful-islam-profile-pic"
