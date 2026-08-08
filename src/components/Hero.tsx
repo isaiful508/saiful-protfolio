@@ -79,14 +79,14 @@ const Hero: React.FC = () => {
             <div className="relative">
               <div className="w-96 rounded-xl border-4 border-white dark:border-gray-800 shadow-2xl">
                 <img
-                  src="https://i.ibb.co.com/s955v0VL/formal-saiful.jpg"
+                  src="https://i.ibb.co.com/1Y78qdk2/saiful-formal.jpg"
                   alt="saiful-islam-profile-pic"
                   className="w-full h-full object-cover mix-blend-overlay"
                 />
               </div>
 
               <div className="absolute -bottom-6 -right-6 bg-white dark:bg-gray-800 p-4 rounded-lg shadow-lg animate-bounce">
-                <div className="text-blue-600 font-bold text-xl">1.5+</div>
+                <div className="text-blue-600 font-bold text-xl">2+</div>
                 <div className="text-sm">Years of Experience</div>
               </div>
             </div>
