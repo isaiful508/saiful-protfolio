@@ -79,7 +79,7 @@ const Hero: React.FC = () => {
             <div className="relative">
               <div className="w-96 rounded-xl border-4 border-white dark:border-gray-800 shadow-2xl">
                 <img
-                  src="https://i.ibb.co.com/1Y78qdk2/saiful-formal.jpg"
+                  src="https://i.ibb.co.com/ZpzqQ44M/saiful-size-minimized.jpg"
                   alt="saiful-islam-profile-pic"
                   className="w-full h-full object-cover mix-blend-overlay"
                 />
