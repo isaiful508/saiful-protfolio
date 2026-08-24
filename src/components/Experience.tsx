@@ -4,67 +4,43 @@ import { Calendar } from 'lucide-react';
 
 const experienceData = [
   {
-    period: "2024 July - Present",
+    period: "2024 July - 2026 July",
     title: "Full-time Developer, Kodezen Limited",
-    description: "Working as a React and JavaScript developer focusing on WordPress Gutenberg block development and eCommerce plugin solutions.",
+    description:
+      "Working as a React and JavaScript developer focusing on WordPress Gutenberg block development and eCommerce plugin solutions.",
     achievements: [
       "Developed custom Gutenberg blocks such as Progress Tracker, News Ticker, Logout, and Marquee",
-      "Fixed multiple bugs related to block rendering, responsiveness, and backend integration",
-      "Collaborated on StoreEngine eCommerce plugin solutions using vanilla JS and React",
-      "Improved performance and maintainability across WordPress plugin architecture"
-    ]
+      "Fixed bugs related to block rendering, responsiveness, and backend integration",
+      "Collaborated on StoreEngine eCommerce solutions using vanilla JS and React",
+      "Improved performance and maintainability across WordPress plugin architecture",
+    ],
   },
+
   {
     period: "2024 July - 2024 December",
     title: "Frontend Intern, Kodezen Limited",
-    description: "Focused on learning and building real-world WordPress blocks and front-end features using React and JavaScript.",
+    description:
+      "Focused on learning and building real-world WordPress blocks and front-end features using React and JavaScript.",
     achievements: [
       "Contributed to custom Gutenberg block development",
-      "Assisted in resolving bugs in legacy block code",
-      "Gained hands-on experience with WordPress block editor (Gutenberg)",
-      "Enhanced skills in vanilla JS, React, and SASS CSS"
-    ]
+      "Resolved bugs in legacy block code",
+      "Gained hands-on experience with WordPress Gutenberg",
+      "Improved skills in vanilla JS, React, and SASS",
+    ],
   },
+
   {
-    period: "2023 - 2024",
-    title: "Ongoing Projects & Learning",
-    description: "Continuously working on personal projects and enhancing my skills in the MERN stack (MongoDB, Express.js, React.js, Node.js). Actively applying for job opportunities and contributing to open-source projects.",
+    period: "2023 Dec- 2024 July",
+    title: "Full-stack Development & Personal Projects",
+    description:
+      "Started programming in 2023 and progressed from HTML, CSS, and JavaScript to React and full-stack development with Node.js, Express.js, and MongoDB.",
     achievements: [
+      "Built responsive web applications with React",
+      "Developed RESTful APIs and database integrations",
       "Built several full-stack applications",
       "Contributed to open-source projects",
-      "Enhanced MERN stack expertise"
-    ]
+    ],
   },
-  {
-    period: "2023",
-    title: "Full-stack Development",
-    description: "Started learning Node.js, Express.js, and MongoDB to become a full-stack developer. Created APIs and connected them with the front-end to build full-stack applications.",
-    achievements: [
-      "Developed RESTful APIs",
-      "Implemented database integrations",
-      "Created full-stack applications"
-    ]
-  },
-  {
-    period: "2023",
-    title: "Learning Advanced Front-end Technologies",
-    description: "Transitioned to learning advanced front-end technologies, including React.js. Built several projects to solidify my understanding of component-based architecture and state management.",
-    achievements: [
-      "Mastered React fundamentals",
-      "Implemented state management solutions",
-      "Built responsive web applications"
-    ]
-  },
-  {
-    period: "2023",
-    title: "Started Learning Programming",
-    description: "I began my journey into programming, focusing on the basics of HTML, CSS, and JavaScript. Initially, my goal was to create simple web pages and understand the core concepts of web development.",
-    achievements: [
-      "Learned HTML, CSS fundamentals",
-      "Mastered JavaScript basics",
-      "Created simple web projects"
-    ]
-  }
 ];
 
 const Experience: React.FC = () => {
